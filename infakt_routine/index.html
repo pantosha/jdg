@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://sobolevbel.github.io/jdg/infakt_routine/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Рутинные операции (на примере infakt.pl) - JDG — ИП в Польше</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u0420\u0443\u0442\u0438\u043d\u043d\u044b\u0435 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u0438 (\u043d\u0430 \u043f\u0440\u0438\u043c\u0435\u0440\u0435 infakt.pl)";
+    var mkdocs_page_input_path = "infakt_routine.md";
+    var mkdocs_page_url = "/jdg/infakt_routine/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> JDG — ИП в Польше</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Главная</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../pesel/">PESEL</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../pz/">Profil Zaufany</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../registration/">Регистрация JDG и VAT</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../zus/">ZUS</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../zus_obnizone_skladki/">Переход на Obniżone składki ZUS</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../taxes/">Налоги</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../declarations/">Декларации</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../legalization/">Легализация</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../workflow/">Рабочий процесс</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Рутинные операции (на примере infakt.pl)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">Выставление фактуры</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">Оплата налогов</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#zus-dra-zus">Составление декларации ZUS DRA и оплата взносов в ZUS</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">Получение оплаты и учет курсовых разниц</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../faq/">F.A.Q.</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">JDG — ИП в Польше</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Рутинные операции (на примере infakt.pl)</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/sobolevbel/jdg/edit/master/docs/infakt_routine.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="infaktpl">Рутинные операции ИП (ежемесячно) с использованием infakt.pl<a class="headerlink" href="#infaktpl" title="Permanent link"></a></h1>
+<p>Disclaimer: подразумевается, что список активностей ИП-шника по учету деятельности на Ryczałt включает следующие типичные операции</p>
+<ol>
+<li>выставление 1 или нескольких фактур (инвойсов)</li>
+<li>оплата налогов</li>
+<li>составление декларации ZUS DRA и оплата взносов в ZUS</li>
+<li>получение оплаты и учет курсовых разниц</li>
+</ol>
+<p>Данный документ описывает шаги в программе infakt.pl, необходимые для выполнения операций из списка выше. Вы должны уже знать свою ставку Ryczałt (обычно это 12% для программистов, 15% для прожект менеджеров, 8.5% для мануальных тестировщиков), перед тем как начинать вести деятельность, выясните Вашу ставку в компетентных органах (тут ссылка на статью про выбор ставки?).</p>
+<p>Вот <a href="../infakt_settings/">тут</a> можно посмотреть минимальную настройку для infakt.pl</p>
+<h2 id="_1">Выставление фактуры<a class="headerlink" href="#_1" title="Permanent link"></a></h2>
+<p>В последний день месяца (если у вас с заказчиком договоренность на помесячную оплату), или по факту выполнения (отгрузки) работ необходимо сгенерировать и выставить фактуру заказчику. Для этого перейдите в раздел <a href="https://app.infakt.pl/app/faktury">Przychody -&gt; Faktury</a> и нажать кнопку <strong>Nowa faktura (dawny rachunek)</strong>.</p>
+<p><img alt="new_fakture.png" src="../images/infakt_routine/new_fakture.png" /></p>
+<p>То же самое можно получить из списка контрагентов:</p>
+<p><strong>Przychody -&gt; Klienti -&gt; Nowa faktura</strong></p>
+<p>для выбранного заказчика, либо из списка услуг:</p>
+<p><strong>Przychody -&gt; Produkty</strong>, чекнуть нужную услугу, и выбрать <strong>Nowa faktura</strong>, выбираем Faktura VAT.</p>
+<p>В новой фактуре выбираем/корректируем необходимые поля (если не выбрано):</p>
+<ol>
+<li>заказчика (из списка)</li>
+<li>дату оказания услуги (последний день месяца либо дату фактической услуги, если они нерегулярны)</li>
+<li>номер банковского счета (если больше одного)</li>
+<li>услугу</li>
+<li>количество "услуги" (если почасовая, то кол-во отработанных часов, если фиксированная ставка, то оставляем 1, так как сумма нетто уже есть ставка)</li>
+</ol>
+<p><img alt="4" src="../images/infakt_routine/new_fakture_2.png" /></p>
+<p>Нажимаете кнопку <strong>Zapisz fakturę</strong> для сохранения данных. Фактура записана!</p>
+<blockquote>
+<p>Важно: На этом этапе фактура еще не участвует в расчете налоговой базы за выбранный месяц (пока она находится в статусе <code>SZKIC</code>). Для того чтобы фактура попала в зачет, необходимо ее напечатать или выслать клиенту.</p>
+</blockquote>
+<p>Для этого нужно в <a href="https://app.infakt.pl/app/faktury">списке фактур</a> выбрать нужную фактуру, и выбрать <strong>Drukuj</strong> либо <strong>Wyślij e-mailem</strong>. Правда в этом случае нет возможности выбрать язык фактуры (TODO: возможно какая-то настройка на это влияет).</p>
+<p>Для возможности выбора языка фактуры надо открыть саму фактуру (щелкнув на нее), и оттуда выбрать <strong>Drukuj fakturę</strong>.</p>
+<p><img alt="5" src="../images/infakt_routine/drukuj_fakture.png" /></p>
+<p>Ссылка на фактуру придет на почту и сама PDF откроется в новом окне.</p>
+<p>После печати статус фактуры сменяется на <code>WYDRUKOWANO</code> и она начинает считаться в налог на следующий месяц и в ZUS.</p>
+<p><img alt="6" src="../images/infakt_routine/ksiegowosc_przeglad.png" /></p>
+<h2 id="_2">Оплата налогов<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
+<blockquote>
+<p>Убедитесь что все фактуры добавлены и в статусе <code>WYDRUKOWANO</code> или <code>WYSŁANO</code>, а так же все курсовые разницы за отчетный период внесены и учтены.</p>
+</blockquote>
+<p><em>(Подразумевается что вы знаете номер своего налогового счета. См <a href="../taxes/#Как узнать свой счет для оплаты налогов">тут</a>. Infakt получает номер счета автоматически при настройке)</em></p>
+<p>До 20го числа каждого месяца (по состоянию на июль 2022) необходимо оплатить налог. В infakt в разделе <a href="https://app.infakt.pl/app/ksiegowosc">Księgowość -&gt; Przegląd</a> отображает сумму для уплаты в текущем месяце исходя из выставленных фактур и внесенных курсовых разниц.</p>
+<p>Есть два варианта оплаты:</p>
+<ol>
+<li>вручную - из своего банковского приложения</li>
+<li>с помощью infakt</li>
+</ol>
+<p>Вторая опция платная, стоимость зависит от суммы оплаты (что-то в районе 3-5 зл сам налог). Однако она самая простая и удобная, необходимо просто нажать <strong>Opłać z inFakt</strong> и завершить платеж с помощью интересующих способов оплаты.</p>
+<p><img alt="9" src="../images/infakt_routine/podatek_zryczaltowany.png" /></p>
+<p>Оплата вручную происходит в банковском приложении.</p>
+<p>На примере PKO: Выполните Przelew Podatkowy</p>
+<ol>
+<li>выберите секцию <code>Pozostałe</code></li>
+<li>вводите в поиске <code>PPE</code></li>
+<li>введите номер своего налогового счета</li>
+<li>введите за какой период оплачивается налог</li>
+<li>выберите в списке Typ identyfikatora <code>NIP</code></li>
+<li>введите свой номер NIP</li>
+</ol>
+<p>Выберите счет с которого платить (имеет смысл платить с фирмового, так как в банках движение по счету может быть условием бесплатности пакета), введите сумму платежа со страницы infakt и совершите платеж.</p>
+<p>По окончанию отметьте налог как оплаченный.</p>
+<p><img alt="10" src="../images/infakt_routine/podatek_zryczaltowany_pko.png" /></p>
+<h2 id="zus-dra-zus">Составление декларации ZUS DRA и оплата взносов в ZUS<a class="headerlink" href="#zus-dra-zus" title="Permanent link"></a></h2>
+<p><em>(Подразумевается что вы знаете номер своего микросчета ZUS. См детали как настроить <a href="../infakt_settings/#Настройка данных ZUS">тут</a>)</em></p>
+<p>До 20го числа каждого месяца (по состоянию на июль 2022) необходимо оплатить складку ZUS и отправить декларацию. Как и в случае с налогами, есть те же две опции для оплаты. Для платежей в ZUS комиссия infakt немного меньше (1-2 зл).</p>
+<p>Для оплаты напрямую через приложение банка необходимо выполнить Przelew Krajowy, выбрать счет, с которого оплачивать (как писал выше, имеет смысл платить с фирмового):</p>
+<ol>
+<li>ввести получателя</li>
+<li>ввести номер своего микросчета ZUS</li>
+<li>Tytul указать "SKLADKA ZUS 22M06" (пометить период, за который осуществляется платеж)</li>
+</ol>
+<p>Ввести сумму со странички infakt и совершить платеж.</p>
+<p><img alt="11" src="../images/infakt_routine/zus_pko.png" /></p>
+<p>По окончанию отметьте складку как оплаченную.</p>
+<p>Для генерации декларации ZUS(файла ZUS DRA) пройдите к нужной складке в списке складок (<code>Przejdź do składki</code>).</p>
+<p><img alt="12" src="../images/infakt_routine/ksiegowosc_przeglad_2.png" /></p>
+<ol>
+<li>Имеет смысл (для истории) прикрепить чек оплаты ZUS к записи в infakt (<code>Dodaj załącznik</code>)</li>
+<li>Нажмите <code>Pobierz ZUS DRA</code> чтобы скачать файл DRA</li>
+</ol>
+<p><img alt="13" src="../images/infakt_routine/zus_dra.png" /></p>
+<p>Скачанный файл можно импортировать на портале ZUS. Альтернативно, можно создать такую же декларацию руками, но импорт файла немного быстрее.</p>
+<p>Для импорта файла нужно зайти на портал ZUS, перейти на закладку <a href="https://www.zus.pl/portal/eplMain.npi">ePłatnik</a> в раздел Dokumenty и там выбрать Import KEDU</p>
+<p><img alt="15" src="../images/infakt_routine/zus_import_kedu.png" /></p>
+<p>Проходим Dalej до шага 2 (<code>Wybór pliku do importu i generacja dokumentów synchronizujących</code>), нажимаем <code>Wybierz plik...</code> и выберите скачаный файл, и переходим на шаг 3 (<code>Utworzenie i walidacja dokumentów</code>).</p>
+<p><img alt="16" src="../images/infakt_routine/zus_import_kedu_2.png" /></p>
+<p>По какой-то причине кнопка <code>Veryfikuj</code> не обновляет статус документов и показывает ошибку, так что можно</p>
+<ol>
+<li>выбрать DRA и нажать <code>Edytuj</code>, в открывшемся окне нажать <code>Sprawdź</code> для валидации и вывода отчета. Чаще всего все будет все хорошо и можно закрыть редактор без изменений.</li>
+<li>нажать <code>Zakończ</code> чтобы сохранить документы в папку <code>Dokumenty robocze</code>.</li>
+</ol>
+<p><img alt="17" src="../images/infakt_routine/zus_import_kedu_3.png" /></p>
+<ol>
+<li>Если по какой-то причине статут документа не OK - нажмите <code>Weryfikuj</code></li>
+<li>Если статус документа OK - нажмите <code>Zatwierdź</code></li>
+</ol>
+<p><img alt="18" src="../images/infakt_routine/zus_import_kedu_4.png" /></p>
+<p>Нажимаем <code>Wyślij</code>, подписываем документ (например, profilem zaufanym ePUAP) и на этом все. Документ должен появиться в папке <code>Dokumenty wysłane</code>.</p>
+<h2 id="_3">Получение оплаты и учет курсовых разниц<a class="headerlink" href="#_3" title="Permanent link"></a></h2>
+<p>При получении оплаты в иностранной валюте могут возникать курсовые разницы. Закон предписывает учитывать курсовые разницы. Учитывать ли только положительные разницы или и отрицательные тоже - мнения расходятся. Сам <a href="https://www.infakt.pl/blog/jak-rozliczyc-roznice-kursowe-na-ryczalcie/">infakt.pl</a> советует вносить как положительную, так и отрицательную курсовую разницу. Тут стоит каждому для себя решить какие разницы учитывать.</p>
+<p>Для учета курсовых разниц нужно знать курс (<code>К1</code>), по которому выставлена фактура, и курс нацбанка Польши (<code>К2</code>) на последний рабочий день, предшествующий дате поступления оплаты. Если валюта в фирмового счета переводится позже, то в момент продажи валюты или перечисления ее на личный счет может возникать еще один курс (<code>К3</code>). Он, как и в случае с поступлением оплаты, считается на предыдущий рабочий день от даты перевода или продажи. Вот <a href="https://kalkulatory2.gofin.pl/Kalkulator-roznic-kursowych-przychodow,12.html">тут</a> и <a href="https://kalkulatory2.gofin.pl/Kalkulator-roznic-kursowych-od-srodkow-wlasnych,12.html">тут</a> есть калькуляторы курсовых разниц, если лень самому считать.</p>
+<p>Для внесения курсовой разницы (<code>K2</code> != <code>K1</code>, или <code>K3</code> != <code>K2</code>), необходимо добавить <code>Dowód wewnętrzny</code>. Для этого переходим в <a href="https://app.infakt.pl/app/faktury">Przychody -&gt; Faktury</a>, и там:</p>
+<ol>
+<li>кликаем по "бургер-кнопке"</li>
+<li>выбираем <code>Dowód wewnętrzny</code></li>
+</ol>
+<p><img alt="22" src="../images/infakt_routine/dowod_wewnetrzny.png" /></p>
+<p>Тут выбираем:</p>
+<ol>
+<li><code>Pozostałe przychody</code></li>
+<li>вписываем <code>dodatnia różnica kursowa</code> или <code>ujemna różnica kursowa</code> в зависимости от курсовой разницы</li>
+<li>вводим сумму курсовой разницы (со знаком минус если она отрицательная)</li>
+<li>опционально можно добавить детали по курсам, которые считали</li>
+</ol>
+<p><img alt="23" src="../images/infakt_routine/dodatnia_ruznica.png" /></p>
+<p>Записываем изменения и документ сразу начинает участвовать в расчете налоговой базы.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../faq/" class="btn btn-neutral float-right" title="F.A.Q.">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../workflow/" class="btn btn-neutral" title="Рабочий процесс"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/sobolevbel/jdg/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../workflow/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../faq/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
